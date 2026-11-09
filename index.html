@@ -245,11 +245,6 @@ footer{background:var(--navy-deep);color:#CFE4F7;padding-block:44px 120px;font-s
 @keyframes gira{to{transform:rotate(360deg)}}
 @keyframes brilho{0%,100%{filter:drop-shadow(0 0 0 rgba(22,216,232,0))}50%{filter:drop-shadow(0 0 18px rgba(22,216,232,.55))}}
 
-/* Ondas da seção "Como funciona": deslizam e ondulam devagar, como um fluxo */
-.how .lines{animation:ondas 9s ease-in-out infinite alternate,ondas-brilho 6s ease-in-out infinite}
-@keyframes ondas{0%{transform:translate(0,0)}50%{transform:translate(-45px,-12px)}100%{transform:translate(-90px,0)}}
-@keyframes ondas-brilho{0%,100%{opacity:.4}50%{opacity:.7}}
-
 /* Cinco etapas: entram em sequência ao rolar e uma linha verde se desenha embaixo de cada uma.
    Só ficam "apagadas" quando o JavaScript está ativo; sem ele, tudo aparece normal. */
 .steps li{position:relative}
@@ -269,7 +264,7 @@ footer{background:var(--navy-deep);color:#CFE4F7;padding-block:44px 120px;font-s
 .anima .meses.visto .mes:nth-child(3){transition-delay:1.2s}
 
 @media (prefers-reduced-motion:reduce){
-  .btn.js-wa::after,.top a.mini::after,.float-wa::after,.hero .circles,.how .lines{animation:none}
+  .btn.js-wa::after,.top a.mini::after,.float-wa::after,.hero .circles{animation:none}
   .anima .steps li,.anima .mes{opacity:1;transform:none;transition:none}
   .anima .meses::before,.steps li::after{transition:none}
 }
